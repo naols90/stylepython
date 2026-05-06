@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My CSS Project</title>
+    <style>
+        /* 1. Page Background */
+        body {
+            background-color: #f0f2f5;
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        /* 2. The Main Card */
+        .project-card {
+            background-color: #ffffff;
+            width: 300px;
+            margin: 0 auto;
+            padding: 25px;
+            
+            /* Border Radius makes it look modern */
+            border-radius: 15px;
+            border: 2px solid #dddddd;
+        }
+
+        /* 3. Title Styling */
+        h2 {
+            font-size: 24px;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        /* 4. Description Styling */
+        p {
+            font-size: 16px;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        /* 5. The Interactive Button */
+        .my-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            
+            /* Background and Radius */
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            
+            /* This makes the hover look smooth */
+            transition: 0.3s;
+        }
+
+        /* 6. Simple Hover Effect */
+        .my-button:hover {
+            background-color: #0056b3;
+            border-radius: 25px; /* The button becomes rounder when touched! */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="project-card">
+        <h2>Weekly Project</h2>
+        <p>I have learned how to change colors, adjust font sizes, and make buttons move!</p>
+        <a href="#" class="my-button">View Project</a>
+    </div>
+
+</body>
+</html>
