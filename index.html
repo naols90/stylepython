@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Python ውስጥ ቀለም እና ዳራ መቀየር | በድር ላይ ዝግጅት አቀራረብ</title>
+    <title>Python Colors & Background | Complete Slide Notes</title>
     <style>
         * {
             margin: 0;
@@ -12,27 +12,25 @@
         }
 
         body {
-            font-family: 'Segoe UI', 'Roboto', 'Noto Sans Ethiopic', 'Abyssinica SIL', sans-serif;
+            font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
             background: linear-gradient(135deg, #1e2a3e 0%, #0f1724 100%);
             color: #f0f3f8;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
 
-        /* slide container */
         .presentation {
             max-width: 1300px;
             margin: 0 auto;
             padding: 2rem 1.5rem;
         }
 
-        /* each slide card */
         .slide {
             background: rgba(20, 30, 45, 0.85);
             backdrop-filter: blur(4px);
             border-radius: 2rem;
             margin-bottom: 2.5rem;
-            padding: 2rem 2rem 2rem 2rem;
+            padding: 2rem;
             box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
             border-left: 6px solid #3b82f6;
             transition: transform 0.2s ease, box-shadow 0.2s;
@@ -70,7 +68,7 @@
 
         h3 {
             font-size: 1.5rem;
-            margin: 1rem 0 0.5rem 0;
+            margin: 1rem 0 0.5rem;
             color: #facc15;
         }
         h4 {
@@ -140,7 +138,7 @@
         }
         hr {
             margin: 1.5rem 0;
-            border-color: #2c4b74;
+            border-color: #2c4b70;
         }
         footer {
             text-align: center;
@@ -169,152 +167,154 @@
 </head>
 <body>
 <div class="presentation">
-    <!-- ========================================= -->
-    <!-- SLIDE 1 : intro -->
+    <!-- SLIDE 1: Introduction -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 1</span>
-            <span class="slide-title">🐍 በPython ውስጥ የጽሑፍ ቀለም እና ዳራ መቀየር</span>
+            <span class="slide-number">Slide 1</span>
+            <span class="slide-title">🐍 Changing Text Color & Background in Python</span>
         </div>
-        <p style="font-size:1.2rem; margin-bottom: 1rem;">በConsole ፕሮግራሞች ውስጥ ቀለም በመጠቀም የበለጠ ሙያዊ እና ማራኪ ያድርጉት።</p>
+        <p style="font-size:1.2rem; margin-bottom: 1rem;">Make your console programs more professional and visually appealing using colors.</p>
         <div class="grid-2">
-            <div class="card-tip">✅ የጽሑፍ ቀለም (Foreground)</div>
-            <div class="card-tip">🎨 የዳራ ቀለም (Background)</div>
-            <div class="card-tip">⚡ ANSI Escape Codes (ምንም ተጨማሪ ጭነት አያስፈልግም)</div>
-            <div class="card-tip">📦 Colorama / termcolor (ለጀማሪ ቀላል)</div>
+            <div class="card-tip">✅ Text color (Foreground)</div>
+            <div class="card-tip">🎨 Background color</div>
+            <div class="card-tip">⚡ ANSI Escape Codes (no extra libraries)</div>
+            <div class="card-tip">📦 Colorama / termcolor (beginner friendly)</div>
         </div>
-        <p><span class="badge">📌 ቅድመ ሁኔታ</span> Python 3.x መጫን + መሰረታዊ የPython እውቀት</p>
-        <p><span class="badge">🎯 ዓላማ</span> ጽሑፍን በቀለም ማደምቀት፣ ስህተቶችን በቀይ ማሳየት፣ ስኬትን በአረንጓዴ፣ ዳራ መለወጥ</p>
+        <p><span class="badge">📌 Prerequisites</span> Python 3.x installed + basic Python knowledge</p>
+        <p><span class="badge">🎯 Goal</span> Highlight text, display errors in red, success in green, change background colors dynamically</p>
     </div>
 
-    <!-- SLIDE 2 : ለምን ቀለም? -->
+    <!-- SLIDE 2: Why use colors? -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 2</span>
-            <span class="slide-title">💡 ለምን ቀለም መጠቀም እንፈልጋለን?</span>
+            <span class="slide-number">Slide 2</span>
+            <span class="slide-title">💡 Why use colors in console?</span>
         </div>
         <div class="grid-2">
-            <div class="card-tip">⚠️ ማስጠንቀቂያ (ቀይ/ቢጫ)</div>
-            <div class="card-tip">✅ ስኬት (አረንጓዴ)</div>
-            <div class="card-tip">🔵 ርዕስ እና መረጃ (ሰማያዊ)</div>
-            <div class="card-tip">🧩 የተሻለ ተጠቃሚ ተሞክሮ</div>
+            <div class="card-tip">⚠️ Warnings (Yellow/Red)</div>
+            <div class="card-tip">✅ Success messages (Green)</div>
+            <div class="card-tip">🔵 Headers & info (Blue/Cyan)</div>
+            <div class="card-tip">🧩 Better User Experience</div>
         </div>
         <table>
-            <tr><th>ጥቅም</th><th>ተግባራዊ ምሳሌ</th></tr>
-            <tr><td>📢 ትኩረት መስጠት</td><td>ዋና ዋና መልዕክቶችን በደማቅ ቀለም</td></tr>
-            <tr><td>🚨 ስህተት መለየት</td><td>Exception ሲከሰት ቀይ ቀለም ማሳየት</td></tr>
-            <tr><td>📊 መረጃ ምደባ</td><td>በሎግ ውስጥ INFO / WARNING / ERROR</td></tr>
+            <tr><th>Benefit</th><th>Practical example</th></tr>
+            <tr><td>📢 Attention grabbing</td><td>Highlight important messages</td></tr>
+            <tr><td>🚨 Error identification</td><td>Show exceptions in red</td></tr>
+            <tr><td>📊 Data classification</td><td>Log levels: INFO / WARNING / ERROR</td></tr>
         </table>
-        <p><span class="badge">🎨 ምሳሌ ሁኔታ</span>— እንደ የአየር ሁኔታ መተግበሪዋ ወይም ማስጀመሪያ ስክሪፕት</p>
+        <p><span class="badge">🎨 Use case</span> — CLI tools, weather apps, startup scripts, loggers</p>
     </div>
 
-    <!-- SLIDE 3 : 3 ዘዴዎች አጠቃላይ -->
+    <!-- SLIDE 3: 3 main methods -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 3</span>
-            <span class="slide-title">⚙️ ቀለም ለመቀየር 3 ዘዴዎች</span>
+            <span class="slide-number">Slide 3</span>
+            <span class="slide-title">⚙️ 3 methods to change colors</span>
         </div>
         <div class="grid-2">
-            <div><span class="badge">📟 1. ANSI Escape Codes</span> ምንም ቤተ-ፅሁፍ አያስፈልግም፣ በሁሉም OS ይሰራል</div>
-            <div><span class="badge">🎨 2. Colorama</span> <span class="inline-code">pip install colorama</span> — በጣም ቀላል፣ Windows/Linux/Mac ተመሳሳይ</div>
-            <div><span class="badge">✨ 3. termcolor</span> <span class="inline-code">pip install termcolor</span> — ቀለሞች + ዳራ በቀላሉ</div>
+            <div><span class="badge">📟 1. ANSI Escape Codes</span> No extra libraries, works everywhere (Windows 10+, Linux, Mac)</div>
+            <div><span class="badge">🎨 2. Colorama</span> <span class="inline-code">pip install colorama</span> — cross-platform, simplest syntax</div>
+            <div><span class="badge">✨ 3. termcolor</span> <span class="inline-code">pip install termcolor</span> — extra attributes (bold, underline)</div>
         </div>
         <hr>
-        <p>በዚህ አጋዥስ ላይ ሶስቱንም በምሳሌ እናያለን። ለፈጣን ትግበራ ANSI ቀላል ነው::</p>
+        <p>Quick example using ANSI:</p>
         <div class="code-block">
-            <code>print("\033[31mይህ ቀይ ጽሑፍ ነው\033[0m")</code>
+            <code>print("\033[31mThis text is red\033[0m")</code>
         </div>
     </div>
 
-    <!-- SLIDE 4 : ANSI ኮዶች (ጽሑፍ ቀለም) -->
+    <!-- SLIDE 4: ANSI foreground colors -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 4</span>
-            <span class="slide-title">🎨 ANSI Escape Codes – ጽሑፍ ቀለም (Foreground)</span>
+            <span class="slide-number">Slide 4</span>
+            <span class="slide-title">🎨 ANSI Escape Codes – Foreground (Text) Colors</span>
         </div>
         <table>
-            <tr><th>ቀለም</th><th>ኮድ</th><th>በConsole እንዴት ይታያል</th></tr>
-            <tr><td>ቀይ</td><td class="inline-code">\033[31m</td><td><span style="color:#ff5555">ደማቅ ቀይ</span></td></tr>
-            <tr><td>አረንጓዴ</td><td class="inline-code">\033[32m</td><td><span style="color:#55ff55">ለስኬት መልእክት</span></td></tr>
-            <tr><td>ቢጫ</td><td class="inline-code">\033[33m</td><td><span style="color:#ffff55">ማስጠንቀቂያ</span></td></tr>
-            <tr><td>ሰማያዊ</td><td class="inline-code">\033[34m</td><td><span style="color:#55aaff">ርዕስ / መረጃ</span></td></tr>
-            <tr><td>ወይን ጠጅ</td><td class="inline-code">\033[35m</td><td><span style="color:#ff88ff">የተለየ ቀለም</span></td></tr>
-            <tr><td>ነጭ</td><td class="inline-code">\033[37m</td><td><span style="color:#ffffff">ነባሪ መልክ</span></td></tr>
+            <tr><th>Color</th><th>Code</th><th>Console preview</th></tr>
+            <tr><td>Red</td><td class="inline-code">\033[31m</td><td><span style="color:#ff5555">Bright red text</span></td></tr>
+            <tr><td>Green</td><td class="inline-code">\033[32m</td><td><span style="color:#55ff55">Success message</span></td></tr>
+            <tr><td>Yellow</td><td class="inline-code">\033[33m</td><td><span style="color:#ffff55">Warning message</span></td></tr>
+            <tr><td>Blue</td><td class="inline-code">\033[34m</td><td><span style="color:#55aaff">Information / headers</span></td></tr>
+            <tr><td>Magenta</td><td class="inline-code">\033[35m</td><td><span style="color:#ff88ff">Magenta highlight</span></td></tr>
+            <tr><td>Cyan</td><td class="inline-code">\033[36m</td><td><span style="color:#55ffff">Cyan details</span></td></tr>
+            <tr><td>White</td><td class="inline-code">\033[37m</td><td><span style="color:#ffffff">Default style</span></td></tr>
         </table>
         <div class="code-block">
-            <code>print("\033[32m✅ ስራ በሚገባ ተጠናቀቀ!\033[0m")</code><br>
-            <code>print("\033[31m❌ ስህተት: ፋይል አልተገኘም\033[0m")</code>
+            <code>print("\033[32m✅ Task completed successfully!\033[0m")</code><br>
+            <code>print("\033[31m❌ Error: File not found\033[0m")</code>
         </div>
-        <p><span class="badge">🔁 አስፈላጊ</span> ቀለሙን ካጠናቀቁ በኋላ <span class="inline-code">\033[0m</span> ይጠቀሙ (ወደ ነባሪ መልሶ ለማምጣት)።</p>
+        <p><span class="badge">🔁 Important</span> Always reset with <span class="inline-code">\033[0m</span> to avoid "bleeding" colors.</p>
     </div>
 
-    <!-- SLIDE 5 : የዳራ ቀለም ANSI -->
+    <!-- SLIDE 5: ANSI background colors -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 5</span>
-            <span class="slide-title">🖌️ ዳራ ቀለም መቀየር (Background) – ANSI</span>
+            <span class="slide-number">Slide 5</span>
+            <span class="slide-title">🖌️ Changing Background Color – ANSI Codes</span>
         </div>
         <table>
-            <tr><th>ዳራ</th><th>ኮድ</th><th>ምሳሌ ተግባር</th></tr>
-            <tr><td>ጥቁር ዳራ</td><td class="inline-code">\033[40m</td><td>ለማድመቅ</td></tr>
-            <tr><td>ቀይ ዳራ</td><td class="inline-code">\033[41m</td><td>ከፍተኛ ማንቂያ</td></tr>
-            <tr><td>አረንጓዴ ዳራ</td><td class="inline-code">\033[42m</td><td>ስኬት ማበረታቻ</td></tr>
-            <tr><td>ቢጫ ዳራ</td><td class="inline-code">\033[43m</td><td>warning / ጥንቃቄ</td></tr>
-            <tr><td>ሰማያዊ ዳራ</td><td class="inline-code">\033[44m</td><td>ርዕስ ዳራ</td></tr>
+            <tr><th>Background</th><th>Code</th><th>Example use</th></tr>
+            <tr><td>Black background</td><td class="inline-code">\033[40m</td><td>Subtle highlight</td></tr>
+            <tr><td>Red background</td><td class="inline-code">\033[41m</td><td>Critical alert</td></tr>
+            <tr><td>Green background</td><td class="inline-code">\033[42m</td><td>Success banner</td></tr>
+            <tr><td>Yellow background</td><td class="inline-code">\033[43m</td><td>Caution / warning</td></tr>
+            <tr><td>Blue background</td><td class="inline-code">\033[44m</td><td>Title background</td></tr>
+            <tr><td>Magenta background</td><td class="inline-code">\033[45m</td><td>Special highlight</td></tr>
+            <tr><td>Cyan background</td><td class="inline-code">\033[46m</td><td>Info panels</td></tr>
         </table>
-        <div class="code-block"><code>print("\033[41m\033[33m ⚠ ከባድ ስህተት! ቀይ ዳራ + ቢጫ ፊደል \033[0m")</code></div>
-        <p>💡 ጽሑፍ ቀለም እና ዳራ ቀለም አንድ ላይ መጠቀም ይቻላል፦ <span class="inline-code">\033[41;33m</span> (ቀይ ዳራ፣ ቢጫ ጽሑፍ)</p>
+        <div class="code-block"><code>print("\033[41m\033[33m ⚠ Critical error! Red background + yellow text \033[0m")</code></div>
+        <p>💡 Combine foreground + background: <span class="inline-code">\033[41;33m</span> (red background, yellow text)</p>
     </div>
 
-    <!-- SLIDE 6 : Colorama መግቢያ -->
+    <!-- SLIDE 6: Colorama introduction -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 6</span>
-            <span class="slide-title">🌈 Colorama – በጣም ቀላል ክሮስ-ፕላትፎርም ዘዴ</span>
+            <span class="slide-number">Slide 6</span>
+            <span class="slide-title">🌈 Colorama – simplest cross‑platform method</span>
         </div>
-        <p>🔧 መጫን፦ <span class="inline-code">pip install colorama</span></p>
+        <p>🔧 Installation: <span class="inline-code">pip install colorama</span></p>
         <div class="code-block">
             <code>from colorama import Fore, Back, Style, init<br>
-init(autoreset=True)   # ከእያንዳንዱ መስመር በኋላ ነባሪ ያደርጋል<br><br>
-print(Fore.RED + "ይህ ቀይ ጽሑፍ ነው")<br>
-print(Fore.GREEN + "አረንጓዴ ስኬት!" + Style.RESET_ALL)<br>
-print(Back.YELLOW + Fore.BLACK + "ጥንቃቄ: ቢጫ ዳራ ጥቁር ጽሑፍ")</code>
+init(autoreset=True)   # automatically reset after each print<br><br>
+print(Fore.RED + "This is red text")<br>
+print(Fore.GREEN + "Green success message!" + Style.RESET_ALL)<br>
+print(Back.YELLOW + Fore.BLACK + "Caution: yellow background, black text")</code>
         </div>
         <div class="grid-2">
             <div>✅ <span class="inline-code">Fore.RED, Fore.BLUE, Fore.CYAN ...</span></div>
             <div>✅ <span class="inline-code">Back.RED, Back.GREEN, Back.YELLOW ...</span></div>
             <div>✅ <span class="inline-code">Style.DIM, Style.BRIGHT</span></div>
-            <div>✅ <span class="inline-code">init(autoreset=True)</span> አይረሱ</div>
+            <div>✅ <span class="inline-code">init(autoreset=True)</span> recommended</div>
         </div>
-        <p>💡 በዊንዶውስ ላይ በቀጥታ ANSI እንዲሰራ Colorama init() ያስችላል። በChromebook/Linux ደግሞ ይሰራል።</p>
+        <p>💡 Colorama makes ANSI work even on old Windows terminals. Perfect for Chromebook / Linux / Mac too.</p>
     </div>
 
-    <!-- SLIDE 7 : termcolor ብልጫ -->
+    <!-- SLIDE 7: termcolor library -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 7</span>
-            <span class="slide-title">✨ termcolor – በተጨማሪ አማራጮች</span>
+            <span class="slide-number">Slide 7</span>
+            <span class="slide-title">✨ termcolor – extra formatting attributes</span>
         </div>
         <p>📦 <span class="inline-code">pip install termcolor</span></p>
         <div class="code-block">
             <code>from termcolor import colored<br><br>
-text = colored("ሰላም ፓይተን!", color="cyan", on_color="on_magenta", attrs=["bold"])<br>
+text = colored("Hello Python!", color="cyan", on_color="on_magenta", attrs=["bold"])<br>
 print(text)<br>
-print(colored("ስኬት", "green", attrs=["reverse"]))<br>
-print(colored("ስህተት", "red", "on_white"))</code>
+print(colored("Success", "green", attrs=["reverse"]))<br>
+print(colored("Error", "red", "on_white"))</code>
         </div>
         <ul style="margin-left: 1.5rem;">
-            <li><span class="inline-code">color="red"</span> ወይም "blue", "yellow"</li>
-            <li><span class="inline-code">on_color="on_red"</span> ለዳራ ቀለም</li>
-            <li><span class="inline-code">attrs=["bold", "underline"]</span> ውፍረት ወይም መስመር ስር</li>
+            <li><span class="inline-code">color="red"</span> or "blue", "yellow", "green" ...</li>
+            <li><span class="inline-code">on_color="on_red"</span> for background</li>
+            <li><span class="inline-code">attrs=["bold", "underline"]</span> additional styling</li>
         </ul>
     </div>
 
-    <!-- SLIDE 8 : ተግባራዊ ምሳሌ – መልዕክት ባለቀለም -->
+    <!-- SLIDE 8: Practical example - startup script -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 8</span>
-            <span class="slide-title">📝 ተግባራዊ ምሳሌ – ማስጀመሪያ ስክሪፕት በቀለም</span>
+            <span class="slide-number">Slide 8</span>
+            <span class="slide-title">📝 Practical example – colored status messages</span>
         </div>
         <div class="code-block">
             <code>def print_status(msg, status="info"):<br>
@@ -326,83 +326,83 @@ print(colored("ስህተት", "red", "on_white"))</code>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"\033[93m⚠️ {msg}\033[0m")<br>
 &nbsp;&nbsp;&nbsp;&nbsp;else:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"\033[94mℹ️ {msg}\033[0m")<br><br>
-print_status("ፋይል በተሳካ ሁኔታ ተቀመጠ", "success")<br>
-print_status("የአውታረ መረብ ግንኙነት አልተገኘም", "error")<br>
-print_status("ማህደረ ትውስታ እየቀነሰ ነው", "warning")</code>
+print_status("File saved successfully", "success")<br>
+print_status("Network connection lost", "error")<br>
+print_status("Low disk space", "warning")<br>
+print_status("Server is running", "info")</code>
         </div>
-        <p><span class="badge">🏆 ውጤት</span> ቀለሞች ኮንሶል ላይ ዓይንን የሚማርኩ እና ሁኔታዎችን በግልጽ ይለያሉ።</p>
+        <p><span class="badge">🏆 Result</span> Clear visual distinction between message types.</p>
     </div>
 
-    <!-- SLIDE 9 : ዳራ ለውጥ ተግባራዊ -->
+    <!-- SLIDE 9: Background manipulation full example -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 9</span>
-            <span class="slide-title">🖍️ ዳራ ቀለም መቀየር – ሙሉ ምሳሌ (ANSI + Colorama)</span>
+            <span class="slide-number">Slide 9</span>
+            <span class="slide-title">🖍️ Background color – complete examples (ANSI + Colorama)</span>
         </div>
         <div class="code-block">
-            <code># ቀላል ANSI ምሳሌ ዳራ ቀለሞች<br>
-print("\033[44m\033[37m ርዕስ ሰማያዊ ዳራ ነጭ ጽሑፍ \033[0m")<br>
-print("\033[42m\033[30m አረንጓዴ ዳራ ጥቁር ጽሑፍ \033[0m")<br><br>
-# Colorama በመጠቀም የበለጠ ለማንበብ ቀላል<br>
+            <code># ANSI background examples<br>
+print("\033[44m\033[37m Title with blue background, white text \033[0m")<br>
+print("\033[42m\033[30m Green background, black text \033[0m")<br><br>
+# Using Colorama (easier to read and maintain)<br>
 from colorama import init, Back, Fore, Style<br>
 init(autoreset=True)<br>
-print(Back.RED + Fore.WHITE + "ወሳኝ ስህተት" + Style.RESET_ALL)<br>
-print(Back.GREEN + Fore.BLACK + "ተጠናቀቀ በሚገባ")</code>
+print(Back.RED + Fore.WHITE + "CRITICAL ERROR" + Style.RESET_ALL)<br>
+print(Back.GREEN + Fore.BLACK + "Operation completed successfully")</code>
         </div>
-        <p>🌟 ዳራዎች ለአዋጅ (banner)፣ ለእውቀት መልዕክቶች እና ለCommand-Line Tools በጣም ጠቃሚ ናቸው።</p>
+        <p>🌟 Backgrounds are great for banners, important notifications, and interactive CLI tools.</p>
     </div>
 
-    <!-- SLIDE 10 : ጥምር እና ዘዴዎች ማነፃፀር -->
+    <!-- SLIDE 10: Comparison table -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 10</span>
-            <span class="slide-title">⚖️ ዘዴዎች ማነፃፀሪያ – የትኛው ምርጥ?</span>
+            <span class="slide-number">Slide 10</span>
+            <span class="slide-title">⚖️ Method comparison – which one to choose?</span>
         </div>
         <table>
-            <tr><th>ዘዴ</th><th>ቀላልነት</th><th>ተንቀሳቃሽነት</th><th>ማጠቃለያ</th></tr>
-            <tr><td>ANSI Escape</td><td>መካከለኛ</td><td>Windows 10+ / Linux / Mac</td><td>ምንም ጥገኝነት የለውም</td></tr>
-            <tr><td>Colorama</td><td>በጣም ቀላል</td><td>ሁሉም (ድሮ ዊንዶውስን ጨምሮ)</td><td>ለጀማሪ ተስማሚ</td></tr>
-            <tr><td>termcolor</td><td>መካከለኛ</td><td>ሁሉም (ANSI ከሚደግፍ)</td><td>ተጨማሪ attrs (bold/underline)</td></tr>
+            <tr><th>Method</th><th>Ease of use</th><th>Portability</th><th>Summary</th></tr>
+            <tr><td>ANSI Escape</td><td>Medium</td><td>Windows 10+ / Linux / Mac</td><td>No dependencies, lightweight</td></tr>
+            <tr><td>Colorama</td><td>Very easy</td><td>All platforms (including old Windows)</td><td>Best for beginners</td></tr>
+            <tr><td>termcolor</td><td>Medium</td><td>All ANSI‑compatible terminals</td><td>Extra attrs (bold, underline, reverse)</td></tr>
         </table>
-        <p>✨ ምክር: በትምህርት ወይም በፈጣን ፕሮቶታይፕ ቀለም መጠቀም ከፈለጉ Colorama ይምረጡ።</p>
+        <p>✨ Recommendation: Use Colorama for teaching, quick prototypes, and maximum compatibility. Use raw ANSI for minimal dependencies.</p>
     </div>
 
-    <!-- SLIDE 11 : ከአማርኛ ጋር መስራት -->
+    <!-- SLIDE 11: Working with non‑English text -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 11</span>
-            <span class="slide-title">🇪🇹 በአማርኛ ጽሑፎች ላይ ቀለም መጠቀም</span>
+            <span class="slide-number">Slide 11</span>
+            <span class="slide-title">🌍 Working with any UTF‑8 text (Amharic, Arabic, etc.)</span>
         </div>
         <div class="code-block">
-            <code># በUnicode የሚጻፉ አማርኛ ፊደላት በቀላሉ ይሰራሉ<br>
-print("\033[35mእንኳን ደህና መጣችሁ በPython ቀለም ማሳያ!\033[0m")<br>
-print("\033[36mቀለሞች ለአማርኛ መልዕክቶችም ያገለግላሉ\033[0m")<br>
-# Colorama መጠቀም<br>
+            <code># Unicode text works perfectly with all color methods<br>
+print("\033[35mWelcome to Python color coding! 🌈\033[0m")<br>
+print("\033[36mMultilingual support works out of the box\033[0m")<br><br>
 from colorama import Fore<br>
-print(Fore.CYAN + "ሰላም ኢትዮጵያ - ቀለም ተጨመረ" + Fore.RESET)</code>
+print(Fore.CYAN + "Colorful output for any language" + Fore.RESET)</code>
         </div>
-        <p>💡 የኮንሶል ቅንብር ፊደል አይነት (font) አማርኛን መደገፍ አለበት — አብዛኛዎቹ ዘመናዊ ተርሚናሎች ይደግፋሉ።</p>
+        <p>💡 Make sure your terminal font supports the script you're using. Modern terminals (Windows Terminal, GNOME Terminal, iTerm2) fully support UTF‑8.</p>
     </div>
 
-    <!-- SLIDE 12 : ማጠቃለያ እና ተጨማሪ ሀሳቦች -->
+    <!-- SLIDE 12: Summary and exercises -->
     <div class="slide">
         <div class="slide-header">
-            <span class="slide-number">ስላይድ 12</span>
-            <span class="slide-title">🏁 ማጠቃለያ እና ልምምድ</span>
+            <span class="slide-number">Slide 12</span>
+            <span class="slide-title">🏁 Summary & practice ideas</span>
         </div>
         <div class="grid-2">
-            <div class="card-tip">⚡ ፈጣን ANSI ቀመር <span class="inline-code">\033[31m</span> ቀይ ጽሑፍ</div>
+            <div class="card-tip">⚡ Quick ANSI: <span class="inline-code">\033[31m</span> red text</div>
             <div class="card-tip">🌈 Colorama: <span class="inline-code">Fore.RED + "text"</span></div>
-            <div class="card-tip">🖌️ Back.GREEN ለዳራ ለውጥ</div>
-            <div class="card-tip">🧪 <span class="inline-code">termcolor.colored()</span> ለላቁ ቅንብሮች</div>
+            <div class="card-tip">🖌️ Back.GREEN for background changes</div>
+            <div class="card-tip">🧪 termcolor: <span class="inline-code">colored()</span> with attrs</div>
         </div>
         <hr>
-        <p><strong>📌 የልምምድ ሀሳብ:</strong> ባለ 3 ሁኔታ ሎገር ይፍጠሩ (INFO, WARNING, ERROR) እያንዳንዱ የራሱ ቀለም ይኑረው። ዳራ በቀለም ለዋና አርእስት ማድመቅ ይለማመዱ።</p>
-        <p><span class="badge">🔗 ጠቃሚ አገናኝ</span> ANSI escape codes full list, colorama docs, termcolor pypi</p>
+        <p><strong>📌 Practice challenge:</strong> Build a colored logger with 3 levels (INFO, WARNING, ERROR). Add a banner with a colored background. Experiment with combining foreground and background colors.</p>
+        <p><span class="badge">🔗 Useful resources</span> ANSI escape codes full list, Colorama documentation, termcolor PyPI page</p>
     </div>
 
     <footer>
-        🐍 ዝግጅት አቀራረብ — በPython ቀለም እና ዳራ መቀየር | ከአማርኛ ጋር ለመስራት ተመቻችቷል
+        🐍 Slide notes — Changing text color and background in Python | Cross‑platform techniques from ANSI to Colorama
     </footer>
 </div>
 </body>
